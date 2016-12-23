@@ -5,6 +5,6 @@ try {
   die('Error : ' . $e->getMessage());
 }
 if (!isset($_COOKIE['PATRICK_cookie_consent'])) {
-  setcookie("HWP_cookie_consent", "yes", time()+24*60*60*365, null, null, false, true);//Cookie consent
+  setcookie("PATRICK_cookie_consent", "yes", time()+24*60*60*365, null, null, false, true);//Cookie consent
 }
 ?>

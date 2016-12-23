@@ -1,4 +1,4 @@
 <?php
-  session_start();
-  include_once("connectDB.php");
+	session_start();
+	header('Location: PS/index.php');
 ?>
