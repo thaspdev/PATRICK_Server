@@ -1,0 +1,43 @@
+.articleItem {
+	display: flex;
+	padding: 10px;
+	margin: 0;
+	cursor: pointer;
+}
+
+.articleItem:hover {
+	background-color: #202020;
+}
+
+.articleItemImage {
+	max-width: 150px;
+	max-height: 150px;
+	width: 30vw;
+	height: 30vw;
+	float: left;
+	order: -1;
+}
+
+.articleItemTextContainer {
+	margin-left: 10px;
+	max-height: 150px;
+	height: 30vw;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.articleItemTitle {
+	margin: 10px;
+}
+
+.articleItemContent {
+	text-align: justify;
+	text-indent: 25px;
+	max-height: 121px;
+}
+
+@media screen and (max-width: 500px) {
+	.articleItemTitle {
+		font-size: 1.2em;
+	}
+}

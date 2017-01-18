@@ -1,0 +1,33 @@
+#article {
+	padding: 0;
+	margin: 0;
+}
+
+#articleTitle {
+	padding: 10px;
+	padding-left: 20px;
+	background-color: #E34B7E;
+	margin: 0;
+}
+
+#articleImageContainer {
+	max-width: 1000px;
+	max-height: 500px;
+	overflow-y: hidden;
+}
+
+#articleImage {
+	max-width: 1000px;
+	max-height: 500px;
+	width: 100%;
+}
+
+#articleAuthor, #articleContent {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#articleContent {
+	text-align: justify;
+	text-indent: 20px;
+}

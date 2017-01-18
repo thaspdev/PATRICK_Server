@@ -1,0 +1,579 @@
+@font-face {
+	font-family: Raleway;
+	src: url(../fonts/Raleway/Raleway-Light.ttf);
+}
+
+@font-face {
+	font-family: Rob_cond;
+	src: url(../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf);
+}
+
+a, a:visited {
+	color: #FFF;
+	text-decoration: none;
+}
+
+body {
+	font-family: Raleway, sans-serif;
+	color: #FFF;
+	margin: 0;
+	top: 0;
+	hyphens: auto;
+	background-color: #2D2D2D;
+	font-weight: bold; /* ?? Le site rend mieux en tt cas*/
+}
+
+button {
+	background-color: #4AE2B0;
+	border: 0;
+	border-radius: 0;
+	color: #FFF;
+	cursor: pointer;
+	font-size: 15px;
+	font-family: Raleway;
+	font-weight: bold;
+	padding: 5px;
+	height: inherit;
+}
+
+button:hover {
+	background-color: #35dea6;
+}
+
+h2, h3 h4, h5, h6 {
+	font-family: Rob_cond, sans-serif;
+}
+
+h1 {
+	text-align: center;
+	align-self: center;
+	font-size: 37px;
+	font-family: Raleway, sans-serif;
+	font-weight: normal;
+}
+
+/*HEADER*/
+
+header {
+	background-color: #202020;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header li:hover {
+	background-color: #161616;
+}
+
+header li > a {
+	height: inherit;
+	display: flex;
+	align-items: center;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+header nav ul {
+	list-style-type: none;
+	display: flex;
+	height: 45px;
+	margin: 0;
+	align-items: center;
+	padding-left: 0px;
+}
+
+header nav ul li {
+	height: inherit;
+}
+
+#headSub {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 45px;
+}
+
+#headSub > * {
+	flex-grow: 3;
+	flex-basis: 0;
+}
+
+#hd_buttons_container, #hd_lang_but_container {
+	display: flex;
+	align-items: center;
+	height: inherit;
+}
+#hd_buttons_container {
+	justify-content: flex-end; 
+}
+
+/*Language button*/
+
+#lang {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#lang_submenu {
+	display: none;
+	position: absolute;
+
+}
+
+#lang_submenu ul {
+	list-style-type: none;
+}
+
+/*Log in & sign up buttons*/
+
+#log_submenu {
+	background-color: #2D2D2D;
+	color: #4AE2B0;
+	font-weight: bold;
+	position: absolute;
+	right: 20px;
+	top: 70px;
+	z-index: 2;
+	padding: 20px;
+	max-width: 300px;
+	max-height: 150px;
+	border-radius: 5px 5px;
+	border: solid #4AE2B0 3px;
+	display: none;
+}
+
+#logTopTriangle {
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 25px solid #4AE2B0;
+	width: 0;
+	height: 0;
+	position: absolute;
+	right: 103px;
+	top: 45px;
+	display: none;
+}
+
+#log_submenu > form {
+	display: flex;
+	flex-direction: column;
+}
+
+#log_submenu span {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logSubTxtInput{
+	max-width: 120px;
+	margin-left: 10px;
+	background-color: #2D2D2D;
+	color: #4AE2B0;
+	border: none;
+	border-bottom: 3px #4AE2B0 solid;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-weight: bold;
+}
+
+#logInSubmit {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #4AE2B0;
+	color: #2D2D2D;
+	font-weight: bold;
+	border: none;
+}
+
+#signUp, #logIn{
+	/*width: 85px;*/
+	padding: 0 5px;
+}
+
+@keyframes in {
+	0% {
+		/*opacity: 0.01;*/
+		height: 0;
+	}
+	100% {
+		/*opacity: 1;*/
+		height: 140px;		
+	}
+}
+
+@keyframes out {
+	0% {
+		height: 140px;
+	}
+	100% {
+		height: 0;
+	}
+}
+
+.animateIn {
+	animation: in 150ms linear forwards;
+	overflow: hidden;
+}
+
+.animateOut {
+	animation: out 150ms linear forwards; 
+	overflow: hidden;
+}
+
+section {
+	padding-left: 10px;
+}
+
+section h2 {
+	text-align: center;
+}
+
+section p {
+	text-align: justify;
+	text-indent: 25px;
+}
+
+#whoIsPatrick {
+	padding-right: 10px;
+}
+
+/*The follwing part should be moved into index.css*/
+#news {
+	padding-left: 0;
+	width:100%;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+#newsWrapper {
+/*	position: relative;
+*/	width: 100%;/*IE6*/
+}
+
+#slideshowButContainer {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	position: absolute;
+	bottom: 5px;
+	left: 0;
+}
+
+.slideshowDot {
+	width: 10px;
+	height: 10px;
+	background-color: #1daf7e;
+	border-radius: 50%;
+	margin-left: 1px;
+	margin-right: 1px;
+	cursor: pointer;
+}
+
+.slideshowDotActive {
+	background-color: #61e5b9;
+}
+
+@keyframes slideIn {
+	0% {
+		opacity: 0.3;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.animateSlideIn {
+	animation: slideIn 500ms ease-out forwards;
+}
+
+.fAImg {
+	max-width: 1000px;
+	width: 100%;
+	max-height: 400px;
+}
+
+.fAImgContainer {
+	max-width: 1000px;
+	max-height: 400px;
+	overflow-y: hidden;
+}
+
+.articleContainer {
+	position: relative;
+	width: 100%; /*IE6*/
+	top: 0;
+	display: none;
+}
+
+.articleContainer > .fATextContainer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: #202020;
+}
+
+.fATextContainer > .fATitle {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+.fATextContainer > .fABegin {
+	margin-left: 10px;
+	margin-top: 5px;
+	margin-bottom: 0;
+	text-align: justify;
+	text-indent: 25px;
+	margin-right: 10px;
+}
+
+.fATextContainer > .fAAuthor {
+	margin: 0;
+	float: right;
+}
+
+.fABegin > .readMoreLink {
+	text-decoration : underline;/*Delete this line?? (Maybe)*/
+	color: #4AE2B0;
+}
+
+@media screen and (max-width: 340px) {
+	#log_submenu {
+		right: 0px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	/*That should stay here*/
+	#hd_buttons_container > button {
+		max-width: 45px;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	#logTopTriangle {
+		right: 48px;
+	}
+
+	.logSubTxtInput {
+		max-width: 100px;
+	}
+	
+	#footerLinks {
+		flex-direction: column;
+	}
+
+	#footerLinks > div {
+		margin: 10px 0;
+	}
+
+	#footerLinks > div:not(:last-child) {
+		border-bottom: 1px #4AE2B0 solid;
+		border-right: 0px;
+	}
+
+	/*That should go too*/
+
+	.fATextContainer {
+		max-height: 100px;
+	}
+
+	.fATextContainer > .fATitle {
+		margin-top: 5px;
+		font-size: 1.2em;
+	}
+
+	.fATextContainer > .fABegin {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		max-height: 38px;
+	}
+}
+
+@media screen and (min-width: 500px) {
+	#footerLinks > div:not(:last-child) {
+		border-right: 1px #4AE2B0 solid;
+	}
+}
+
+/*And that should stay*/
+
+/*FOOTER*/
+
+footer {
+	background-color: #202020;
+	color: #4AE2B0;
+	font-weight: bold;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+#footerLinks {
+	display: flex;
+}
+
+#footerLinks ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+#footerLinks > div {
+	padding-left: 20px;
+	padding-right: 20px;
+	flex-basis: 33%;
+}
+
+footer a, footer a:visited {
+	color: #4AE2B0;
+}
+
+footer a:hover {
+	color: #FFF;
+}
+
+.linkWithIcon {
+	margin-left: 5px;
+}
+
+#githubIconWhite {
+	display: none;
+}
+
+#newsletterEmail {
+	background-color: #383838;
+	color: #4AE2B0;
+	font-weight: bold;
+	border: none;
+	padding: 5px;
+}
+
+#newsletterSubmit {
+	background-color: #4AE2B0;
+	color: #2D2D2D;
+	cursor: pointer;
+	border: none;
+	font-weight: bold;
+	padding: 5px;
+}
+
+#newsletterSubmit:hover {
+	background-color: #2D2D2D;
+	color: #4AE2B0;
+}
+
+/* SPINNERS/LOADERS */
+
+.spinner {
+	border-radius: 50%;
+	background-color: #FFF;
+	position: relative;
+	display: inline-block;
+	top: 100px;
+	left: 100px;
+}
+
+.spinner::after, .spinner::before {
+	content: "";
+	display: block;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px
+}
+
+.spinner::after {
+	position: absolute;
+	top: -4px;
+	left: -4px;
+	border: 4px solid transparent;
+	border-top-color: #4AE2B0;
+	border-bottom-color: #4AE2B0;
+	animation: rollingOnTheRiver 2s linear infinite;
+}
+
+@keyframes rollingOnTheRiver {
+	0% {
+		transform: rotate(0deg) scale(1);
+	}
+	50% {
+		transform: rotate(90deg) scale(1.1);
+	}
+	100% {
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+/*This part should be moved into contact.css*/
+
+#contact > form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+#contact > form > div {
+	display: flex;
+	margin: 5px 20px;
+	justify-content: space-between;
+}
+
+#contact > form > div:not(:first-child) {
+	flex-direction: column;
+}
+
+#contact > form > div:not(:last-child) input, #contact textarea{
+	background-color: #2D2D2D;
+	border: 2px #4AE2B0 solid;
+	color: #4AE2B0;
+	font-weight: bold;
+	padding: 10px;
+	margin: 2px 0;
+}
+
+#contact > form > div:not(:last-child) input {
+	border: none;
+	border-bottom: 2px #4AE2B0 solid;
+}
+
+#contactMessage {
+	flex-direction: column;
+}
+
+#contactFullName {
+	flex-direction: row;
+	align-items: flex-end;
+}
+
+#contactFullName > div {
+	display: flex;
+	flex-direction: column;
+	width: 48%;
+}
+
+#contactSubmit {
+	background-color: #4AE2B0;
+	border: 2px #2D2D2D solid;
+	color: #2D2D2D;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1em;
+	padding: 10px;
+	width: 50%;
+	max-width: 220px;
+	align-self: flex-end;
+}
+
+#contactSubmit:hover {
+	background-color: #2D2D2D;
+	border: 2px #4AE2B0 solid;
+	color: #4AE2B0;
+}
